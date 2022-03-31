@@ -1,0 +1,92 @@
+ what is this function doing? get two queue as paremeter, first is data values are something like just number {float,int}
+ inside queue classLevels we've some number like {float,int..}
+ this fucntion would count how much number is in the range classLevels.front and classLevels.front(next value)
+ for exmaple in this data and range classLevel '1'  we've  5 number in range 2.0 to 2.4
+ 
+ 
+ qeueue Sizes are :
+ data queue size = 30
+ classLevels.size = 12
+  
+  
+  
+  exmaple values are :
+  queue data =     float arr[30] =
+    {2.0,2.1,2.3,3.0,3.1,2.7,
+     2.8,3.5,3.1,3.7,3.1,2.6,
+     3.5,4.0,2.3,3.5,4.2,3.7,
+     3.2,2.7,2.5,2.7,3.8,3.0,
+     2.8,2.9,4.1,3.2,2.8,2.2};
+     
+     
+  queue classLevel are:
+  {2.0,2.4,2.4,2.8,2.8,3.2,3.2,3.6,3.6,4.0,4.0,4.2}
+  
+  
+  
+*PROBLEM* is : it count more than range. exmaple: range is 2.4 to 2.8 and iwanna make an exaption 
+to dont count karanBala (number 2.8) 
+karanBala is a vraible for showing max range is.
+
+i would add code:
+  if(temp == karanBala)
+    cout << "value is more than range" << endl;
+but this code would not work!! i don't know why?!?!?!?!?
+
+PROBLEM SUMMARY IS : i want check the euqalation of two variable 
+those variables value are fetched from queue. the condition is work with temp>=karnaBala but
+about equal or unequal is works incorrectly.
+i added my code to this wiht ++++++++++++++++++ in the first to easy see it
+
+i wrote two situation of code for add my exeption/condition
+  
+ 
+ #1 CODE IS :
+    void fi2(queue<float>data,queue<float>classLevels)
+ //    for(int i=0; i<=dataCount-1; i++)
+//    {
+//        temp = data.front();
+
+//        karanDown = temp;
+//        karanUp = karaDown + L;
+
+//        while(temp >= karanDown && temp < karanUp)
+//        {
+        +++++++++++++++++++++++++++++++++++ if(temp ==karanUp)
+        +++++++++++++++++++++++++++++++++++++++++ break;
+//             counter++;
+//             data.pop();
+//             temp = data.front();
+//        }
+
+//        f.push(counter);
+//        counter=0;
+//        if(data.empty())
+//            break;
+//    }
+
+
+
+
+#2 CODE IS 
+
+    void fi2(queue<float>data,queue<float>classLevels)
+ //    for(int i=0; i<=dataCount-1; i++)
+//    {
+//        temp = data.front();
+
+//        karanDown = temp;
+//        karanUp = karaDown + L;
+
++++++++++++++ //        while(temp >= karanDown && (temp < karanUp && temp != karanUp))
+//        {
+//             counter++;
+//             data.pop();
+//             temp = data.front();
+//        }
+
+//        f.push(counter);
+//        counter=0;
+//        if(data.empty())
+//            break;
+//    }
