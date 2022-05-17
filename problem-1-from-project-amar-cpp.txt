@@ -90,3 +90,8 @@ i wrote two situation of code for add my exeption/condition
 //        if(data.empty())
 //            break;
 //    }
+
+
+**SOLVED 
+PROBLEM WAS THE CLASS AND FUNCTION PASS VARIABLES
+VARIABLE WERE INSRT INTO ANTOHER TYPE **
